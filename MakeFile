@@ -1,0 +1,10 @@
+reduce:
+	python ./reducer.py
+
+	ifeq ($(OS),Windows_NT)
+		delcom = rd /s /q "f1_data"
+	else
+		delcom = rm -rf "f1_data"
+	endif
+	
+	$(delcom)
